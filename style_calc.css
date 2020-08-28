@@ -1,0 +1,174 @@
+body
+        {
+            font-family: 'Dosis', sans-serif;
+            font-size: 16px;
+            margin:0;
+        }
+        * 
+        {
+            box-sizing:border-box;
+        }
+        .intro
+        {
+            width: 100%;
+            height: 100vh;
+            background-color: #4d3e3e;
+            /* background: url("D:/html/calculator/images/intro3.jpg")center no-repeat; */
+            background-size: cover;
+        }
+        .welcom_window
+        {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .header
+        {
+            padding-top: 15px;
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+        .logo
+        {
+            font-size: 30px;
+            font-weight: 900;
+            font-family: 'Fredoka One', cursive;
+            color: #FFE4C4;
+            margin-left: 10px;
+        }
+        .nav
+        {
+            font-size: 19px;
+            text-transform: uppercase;
+        }
+        .nav_link
+        {
+            display: inline-block;
+            vertical-align: top;
+            margin: 15px;
+            color:#fff;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color .2s linear;
+        }
+        .nav_link:hover
+        {
+            color:wheat;
+        }
+        .menu
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+        .calc
+        {
+            position: absolute;
+        }
+        .form_calc
+        {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1200px;                    
+        }
+        .title_sheet
+        {
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 8vw;
+            margin: 0;
+            padding-top:70px;
+        }
+        .calc_buttons
+        {
+            display: flex;
+            justify-content: space-between;
+            display: inline-block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1200px;
+            position: center;
+            display: inline-block;
+            position: center;
+            box-sizing: border-box;
+            
+        }
+        .calc_buttons_inside
+        {
+            width :35vw;
+            min-width: 270px;
+            position: center;
+            margin: auto;
+            margin-top: 20px;
+
+
+        }
+        .input
+        {
+            background: white;
+            padding:15px;
+            width:100%;
+            height: 40px;
+            text-align: right;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            margin-right: 2px;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+          
+
+        }
+        .btn,
+        .btn_num,
+        .btn_operations
+        {
+           width:19%;
+           flex-wrap: wrap;
+            
+            min-height: 60px;
+            margin:0 auto;
+            padding: 0;
+            margin-bottom: 2px;
+            border:0;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            
+           
+            font-weight: 500;
+            border-radius: 2px;
+
+        }
+        .btn_num
+        {
+            background-color: #f1e3cb;
+            color:black;
+        }
+        .buttons_operations
+        {
+            min-width: 19%;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-around;
+        }
+        .btn_operations
+        {
+            background-color: #f9b384;
+        }
+        .btn_big
+        {
+            width: 40%;
+            height: 60px;
+            padding: 0;
+            background-color: #4d3e3e;
+            /* border-color: #f1e3cb; */
+            color:#f1e3cb;
+            font-family: 'Montserrat', sans-serif;
+            /* border:3%; */
+            box-shadow: -1px -1px 0px 0px white;
+            border-radius: 2px;
+        }

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href='style_calc.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+
+    <title>Calculator</title>   
+
+
+
+
+</head>
+
+
+<body>
+
+    <header class = "header">
+        
+        <div class = "welcom_window">
+            <div class="menu"> 
+                
+                <div class="logo"> DayCalc </div>
+                
+                <nav class = "nav">
+                    <a class="nav_link" href="main.html">Calculator</a>
+                   
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <div class = "intro">
+        <div class = "form_calc">
+            <div >
+                <h1 class = "title_sheet">Calculator</h1>
+            </div>            
+        
+            <div class = "calc_buttons">
+                <div class = "calc_buttons_inside">
+
+                    
+                    <input type="text" placeholder="0.00" class="input" id="input" readonly /> 
+                
+                    
+                    
+                    <div class = "buttons_operations" id="All_buttons">
+                        
+                        
+                        <button  class="btn_num" value="1" >1</button>
+                        <button class="btn_num" value="2">2</button>
+                        <button class="btn_num" value="3">3</button>
+                        <button class="btn_operations" value="%">%</button>
+                        <button class="btn_operations" value="delete"> <= </button>
+                        <button class="btn_num" value="4">4</button>
+                        <button class="btn_num" value="5">5</button>
+                        <button class="btn_num" value="6">6</button>
+                        <button class="btn_operations" value="/">/</button>
+                        <button class="btn_operations" value="x">x</button>
+                        <button class="btn_num" value="7">7</button>
+                        <button class="btn_num" value="8">8</button>
+                        <button class="btn_num" value="9">9</button>
+                        <button class="btn_operations" value="+">+</button>
+                        <button class="btn_operations" value="-">-</button>
+                        <button class="btn_num" value="0">0</button>
+                        <button class="btn_operations" value=".">.</button>
+                        <button class="btn_operations" value="C">C</button>
+                        
+                        <button class="btn_big" value="=">=</button>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let result = "";
+        document.querySelectorAll("button").forEach(BUT => {
+            const input= document.getElementById("input"); 
+            BUT.addEventListener("click", () =>
+            {
+                switch (BUT.value)
+                {
+                    case "=":
+                        console.log(result);                        
+                        result = calcBefore(result);                       
+                        console.log(result);
+                        input.value = result;
+                      //  result = String(result); //выдает ошибку без этой строки
+                        break;
+                    case "C": 
+                        result = "";
+                        input.value="";
+                        break;
+                    case "delete":
+                       input.value = input.value.slice(0, input.value.length-1); 
+                       result = input.value;
+                        break;
+                    default:
+                        result=calc(BUT.value,result); 
+                        if(result.split("|")[result.split("|").length-1]!="")
+                            input.value= result.split("|")[result.split("|").length-1];
+                        else{
+                            input.value= result.split("|")[0];
+                            }
+                }
+                
+            });
+            BUT.addEventListener("click", () =>
+                {
+                        
+                    BUT.style.background = "white";
+                    changeColorWhenPassed(BUT);
+                });
+        });
+
+
+
+    </script>
+    <script src="CalcFunctions.js"></script>
+</body>
+</html> 
